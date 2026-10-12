@@ -10,5 +10,7 @@ for i in y:
     sum += i
     l += 1
     print(i)
+    print(len(range(i)))
 print("колво", l)
-print("сумма", sum)
+print(f"сумма {sum}")
+print()
