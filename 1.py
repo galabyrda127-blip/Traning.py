@@ -9,8 +9,10 @@ for i in y:
         continue
     sum += i
     l += 1
-    print(i)
+    if  (i > 10 and i < 12):
+        print("вы уже дошли по циклу до 11")
+        sum += i
+
     print(len(range(i)))
 print("колво", l)
 print(f"сумма {sum}")
-print()
