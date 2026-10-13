@@ -10,7 +10,7 @@ print(tob, max(x,y))
 
 
 
-v =str(input("Веедите месяц:"))
+v =str(input("Напишите что-нибудь на  англиском:"))
 def count_vowels(s):
     vowels = "aeiouAEIOU"
     count = 0
@@ -28,13 +28,13 @@ print(label, count_vowels(v))
 
 
 g = int(input("Введите день:"))
-t = input("Ввежите месяц на англиском:")
+t = input("Введите месяц :")
 
-def date( *, d: int,m: str):
+def date( *, d: int,m: str)->str:
     if d>31:
         print("В месяце нет столько дней")
     else:
-      return f"Вы ввели {d} день и {m} месяц"
+      return f"Вы ввели {str(d)} день и {m} месяц"
 
 print(date(d=g,m=t))
 
