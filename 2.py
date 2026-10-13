@@ -21,9 +21,23 @@ def count_vowels(s):
 
     return count
 
-
 label = "Кол-во гласных:"
 
-
 print(label, count_vowels(v))
+
+
+
+g = int(input("Введите день:"))
+t = input("Ввежите месяц на англиском:")
+
+def date( *, d: int,m: str):
+    if d>31:
+        print("В месяце нет столько дней")
+    else:
+      return f"Вы ввели {d} день и {m} месяц"
+
+print(date(d=g,m=t))
+
+
+
 
