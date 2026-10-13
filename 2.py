@@ -30,7 +30,7 @@ print(label, count_vowels(v))
 g = int(input("Введите день:"))
 t = input("Введите месяц :")
 
-def date( *, d, m: str)->str:
+def date( *, d:int, m: str)->str:
     if d>31:
         print("В месяце нет столько дней")
     else:
