@@ -10,7 +10,7 @@ print(tob, max(x,y))
 
 
 
-v =str(input("Веедите текст на англиском:"))
+v =str(input("Веедите месяц:"))
 def count_vowels(s):
     vowels = "aeiouAEIOU"
     count = 0
