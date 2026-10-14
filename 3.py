@@ -13,13 +13,16 @@ def martingale(*, depozit: int, min_bet: int, max_bet: int) -> tuple[int, int]:
     max_depozit = depozit
     while depozit > 0:
        # current_bet = min(current_bet, depozit)
+       # меняем min_bet -> current_bet если не хотим влезать в долги
         steps += 1
         depozit -= min_bet   #current_bet
-        flipping_coin = random.choice(cn)
+        flipping_coin = flip()
+        player_choice = random.choice(cn)
+        print(f"Игрок выбрал: {player_choice}")
         print("=====")
         print(f"Ставка: {min_bet}")  #current_bet
         print(f"Выпало: {flipping_coin}")
-        if flipping_coin == random.choice(cn):
+        if flipping_coin == orel:
             win = min_bet * 2   #current_bet
             depozit += win
             print(f"Выигрыш: {win}")
@@ -32,6 +35,8 @@ def martingale(*, depozit: int, min_bet: int, max_bet: int) -> tuple[int, int]:
         if depozit > max_depozit:
             max_depozit = depozit
         print(f"Текущий депозит: {depozit}")
+        if depozit < 0:
+          print(f"взяли в долг на последнюю ставку  {-depozit}")
     return steps, max_depozit
 
 steps, max_depozit = martingale(depozit=100, min_bet=1, max_bet=100)
