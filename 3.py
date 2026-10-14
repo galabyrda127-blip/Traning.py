@@ -15,11 +15,11 @@ def martingale(*, depozit: int, min_bet: int, max_bet: int) -> tuple[int, int]:
        # current_bet = min(current_bet, depozit)
         steps += 1
         depozit -= min_bet   #current_bet
-        flipping_coin = flip()
+        flipping_coin = random.choice(cn)
         print("=====")
         print(f"Ставка: {min_bet}")  #current_bet
         print(f"Выпало: {flipping_coin}")
-        if flipping_coin == orel:
+        if flipping_coin == random.choice(cn):
             win = min_bet * 2   #current_bet
             depozit += win
             print(f"Выигрыш: {win}")
